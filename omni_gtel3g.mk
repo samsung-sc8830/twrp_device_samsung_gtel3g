@@ -23,7 +23,9 @@
 #$(call inherit-product, device/samsung/v1awifi/device.mk)
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Common path for device trees
 COMMON_PATH := device/samsung/sc8830-common
