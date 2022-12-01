@@ -13,9 +13,6 @@ TARGET_PREBUILT_DTIMAGE := $(DEVICE_PATH)/prebuilt/dt.img # Used by mkbootimg.mk
 # Inherit from common
 -include $(COMMON_PATH)/BoardConfigCommon.mk
 
-TARGET_SCREEN_WIDTH := 2560
-#TARGET_SCREEN_HEIGHT := 2560
-
 # Recovery
 TARGET_OTA_ASSERT_DEVICE := SM-T561,SM-T560,gtel3g,gtelwifi,gtel3gxx,gtelwifixx,smt561,smt560
 TW_THEME := portrait_hdpi
