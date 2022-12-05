@@ -19,11 +19,11 @@
 # product configuration (apps).
 #
 
-# Inherit from those products. Most specific first.
-#$(call inherit-product, device/samsung/v1awifi/device.mk)
-# This is where we'd set a backup provider if we had one
-#$(call inherit-product, device/sample/products/backup_overlay.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+PRODUCT_RELEASE_NAME := gtel3g
+
+$(call inherit-product, vendor/omni/config/common_tablet.mk)
 
 # Common path for device trees
 COMMON_PATH := device/samsung/sc8830-common
@@ -43,3 +43,4 @@ PRODUCT_DEVICE := gtel3g
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-T561
 PRODUCT_MANUFACTURER := SAMSUNG
+PRODUCT_CHARACTERISTICS := tablet
